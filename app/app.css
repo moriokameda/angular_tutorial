@@ -1,12 +1,20 @@
 body {
     padding-top: 20px;
   }
-  table {width: 50%;}
-  td {
-    border: 1px solid;
-    padding: 4px;
+  .phones {
+    list-style: none;
   }
-  th{
-    border: 1px solid;
-    padding: 4px;
+  
+  .phones li {
+    clear: both;
+    height: 115px;
+    padding-top: 15px;
+  }
+  
+  .thumb {
+    float: left;
+    height: 100px;
+    margin: -0.5em 1em 1.5em 0;
+    padding-bottom: 1em;
+    width: 100px;
   }
