@@ -5,12 +5,12 @@ angular.
   module('phoneList').
   component('phoneList', {
     templateUrl: 'phone-list/phone-list.template.html',
-    controller: function PhoneListController($http) {
-      var self = this;
-      self.orderProp = 'age';
+    controller: ['Phone',
 
-      $http.get('phones/phones.json').then(function(response) {
-        self.phones = response.data;
-      });
-    }
+      function PhoneListController(phone) {
+        this.phones = phone.query();
+        this.orderProp = 'age';
+        
+      }
+    ]
   });
